@@ -1,0 +1,82 @@
+@import "../../scss/component_import.scss";
+
+.button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease;
+  font-weight: bold;
+  min-width: 100px;
+  text-shadow: none;
+  text-decoration: none;
+  color: #fff;
+  -webkit-tap-highlight-color: transparent !important;
+  touch-action: none !important;
+  user-select: none !important;
+
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &--round {
+    $btn_dimension: 80px;
+    height: $btn_dimension;
+    width: $btn_dimension;
+    border-radius: 50%;
+    min-width: 0;
+  }
+
+  &__primary {
+    background-color: #0b97fe;
+  }
+  &__secondary {
+    background-color: #292b2c;
+  }
+  &__danger {
+    background-color: #fa7783;
+  }
+  &__warning {
+    background-color: #ff850c;
+  }
+  &__info {
+    background-color: #5bc0de;
+  }
+  &__success {
+    background-color: #5cb85c;
+  }
+
+  &__container {
+    text-align: center;
+  }
+
+  &--not-center {
+    text-align: left;
+  }
+
+  &__topMargin {
+    margin-top: 1.5rem;
+  }
+  &__bottomMargin {
+    margin-bottom: 1.5rem;
+  }
+  &__autoMargin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--dashboard__mobile_disable {
+    display: none;
+  }
+
+  @include tablet {
+    &--dashboard__mobile_disable {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../scss/component_import.scss";
+
+.dashboard {
+  &__card-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__center-align {
+    text-align: center;
+  }
+
+  &__container-full-height {
+    height: 100vh;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  &__btn-up,
+  &__btn-left,
+  &__btn-right,
+  &__btn-down {
+    background-image: url("../../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center 1.5rem;
+    background-size: 3rem;
+  }
+  &__btn-left {
+    transform: rotate(-90deg);
+    margin-right: auto;
+  }
+  &__btn-right {
+    transform: rotate(90deg);
+    margin-left: auto;
+  }
+  &__btn-down {
+    transform: rotate(180deg);
+  }
+  &__flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  @include desktop {
+    &__btn-left,
+    &__btn-right {
+      margin: auto;
+    }
+  }
+}

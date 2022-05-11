@@ -1,0 +1,11 @@
+.header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+
+  &--center {
+    display: grid;
+    align-items: center;
+    height: 100%;
+  }
+}

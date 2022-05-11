@@ -1,0 +1,13 @@
+.auth {
+  &__body {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  &__horizontal-rule {
+    height: 1px;
+    width: 100%;
+    background-color: #ecf9ff;
+    margin: 1rem 0;
+  }
+}

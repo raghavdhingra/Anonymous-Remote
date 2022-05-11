@@ -1,0 +1,33 @@
+@import "../../scss/component_import.scss";
+
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding: 1rem 0;
+
+  &__header {
+    color: rgb(255, 97, 97);
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__leftFlex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__username {
+    font-weight: bold;
+    color: #666;
+  }
+
+  @include desktop {
+    &__header {
+      font-size: 3rem;
+    }
+  }
+}

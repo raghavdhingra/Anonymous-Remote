@@ -1,17 +1,21 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+
 import Auth from "./auth/auth";
-import Controller from "./controller/controller.jsx";
+import Alerts from "./alerts/alerts";
+import Remote from "./remote/remote";
 
-import "./index.css";
-
-const PageRoute = () => {
+const Base = () => {
   return (
-    <Routes>
-      <Route path="/auth" element={<Auth />} />
-      <Route path="/" element={<Controller />} />
-    </Routes>
+    <>
+      <Alerts />
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/" element={<Remote />} />
+        <Route path="*" element={<h1>Page not Found</h1>} />
+      </Routes>
+    </>
   );
 };
 
-export default PageRoute;
+export default Base;
