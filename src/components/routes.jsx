@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Auth from "./auth/auth";
 import Alerts from "./alerts/alerts";
@@ -9,11 +9,13 @@ const Base = () => {
   return (
     <>
       <Alerts />
-      <Routes>
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/" element={<Remote />} />
-        <Route path="*" element={<h1>Page not Found</h1>} />
-      </Routes>
+      <Switch>
+        <Route path="/" exact component={Remote} />
+        <Route path="/auth" exact component={Auth} />
+        <Route path="">
+          <h1>Page not Found</h1>
+        </Route>
+      </Switch>
     </>
   );
 };

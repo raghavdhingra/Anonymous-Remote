@@ -15,6 +15,10 @@ const Alert = ({ title, type, handleDismiss }) => {
         handleDismiss();
       }, 2000);
     }
+
+    return () => {
+      handleDismiss();
+    };
     // eslint-disable-next-line
   }, []);
 

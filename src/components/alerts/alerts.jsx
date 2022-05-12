@@ -32,9 +32,7 @@ const Alerts = () => {
 
   return (
     <div className="alert__container">
-      {errorList.map((err) => (
-        <Alert key={err.type} {...err} />
-      ))}
+      {errorList.map((err) => err.title && <Alert key={err.type} {...err} />)}
     </div>
   );
 };

@@ -28,18 +28,21 @@ import {
   removeKeyboardListener,
   triggerCar,
 } from "../../utility/function";
-import { Navigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 let MqttClient = null;
 
 const Remote = () => {
   const isLoggedIn = useRecoilValue(loginState);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      return history.push("/auth");
+    }
+  }, [isLoggedIn, history]);
+
   const credentials = useRecoilValue(credentialAtom);
-
-  if (!isLoggedIn) {
-    // return <Navigate to="/auth" />;
-  }
-
   const [isConnected, setIsConnected] = useState(false);
   const [isKeyboardListener, setIsKeyboardListener] = useState(false);
 
