@@ -13,8 +13,10 @@ The .ino file should be uploaded to ESP module for the GPIO pins
 
 Some Images for the controller:
 
-![Untitled](https://user-images.githubusercontent.com/24492201/168127710-ef389a1d-ce47-4b2e-8ed6-4439b8fdc0f2.png)
+![Login Page](https://user-images.githubusercontent.com/24492201/168127710-ef389a1d-ce47-4b2e-8ed6-4439b8fdc0f2.png)
 
-![Untitled1](https://user-images.githubusercontent.com/24492201/168127775-29556ba7-0b62-469c-b469-a6c88deb2bf8.png)
+![Controller](https://user-images.githubusercontent.com/24492201/168127775-29556ba7-0b62-469c-b469-a6c88deb2bf8.png)
+
+Appwrite server: http://167.71.231.179/
 
 Hope you will like it. :)
