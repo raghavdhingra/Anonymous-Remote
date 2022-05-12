@@ -4,7 +4,7 @@ import { RecoilRoot } from "recoil";
 import { BrowserRouter } from "react-router-dom";
 
 import Routes from "./components/routes";
-// import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 import "./index.scss";
 
@@ -19,4 +19,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// serviceWorkerRegistration.register();
+serviceWorkerRegistration.register();
